@@ -3,7 +3,8 @@ import Logo from './images/logo.png'
 import Button from './components/Button';
 import Input from './components/Input';
 import Clear from './components/Clear';
-import { useState } from 'react'
+import { useState } from 'react';
+import { evaluate } from 'mathjs';
 
 function App() {
 
@@ -11,7 +12,15 @@ function App() {
 
   const addInput = value => {
     setInput(input + value)
-  }
+  };
+
+  const result = () => {
+    if (input) {
+      setInput(evaluate(input))
+    } else {
+      alert('Por favor agrega los valores para realizar el calculo')
+    }
+  };
 
   return (
     <div className="App">
@@ -42,13 +51,15 @@ function App() {
           <Button manageClick={addInput}>*</Button>
         </div>
         <div className='row'>
-          <Button manageClick={addInput}>=</Button>
+          <Button manageClick={result}>=</Button>
           <Button manageClick={addInput}>0</Button>
           <Button manageClick={addInput}>.</Button>
           <Button manageClick={addInput}>/</Button>
         </div>
         <div className='row'>
-          <Clear>Clear</Clear>
+          <Clear manageClear={() => setInput('')}>
+            Clear
+          </Clear>
         </div>
       </div>
     </div>
