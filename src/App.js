@@ -1,5 +1,6 @@
 import './App.css';
 import Logo from './images/logo.png'
+import LogoDRCNegro from './images/LogoDRCNegro.png'
 import Button from './components/Button';
 import Input from './components/Input';
 import Clear from './components/Clear';
@@ -26,7 +27,7 @@ function App() {
     <div className="App">
       <div className='logo-container'>
         <img
-          src={Logo}
+          src={LogoDRCNegro}
           className='logo'
           alt='Logo calculator' />
       </div>
