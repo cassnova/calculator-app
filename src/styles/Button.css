@@ -16,7 +16,7 @@
 }
 
 .container-btn:hover {
-    background-color: #5a01a7;
+    background-color: #585858;
 }
 
 .operator {
@@ -24,5 +24,5 @@
 }
 
 .operator:hover {
-    background-color: #ff6600;
+    background-color: #008f37;
 }
