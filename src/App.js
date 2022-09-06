@@ -1,5 +1,4 @@
 import './App.css';
-import Logo from './images/logo.png'
 import LogoDRCNegro from './images/LogoDRCNegro.png'
 import Button from './components/Button';
 import Input from './components/Input';
